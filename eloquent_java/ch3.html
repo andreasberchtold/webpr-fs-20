@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    const min = (x, y) => x < y ? x : y;
+    document.writeln(min(-5,3));
+
+
+    const isEven = n => {
+        if (n === 0) return true;
+        else if (n === 1) return false;
+        else return isEven(n-2);
+    }
+    document.writeln(isEven(75));
+
+
+    const countBs = s => {
+        let counter = 0;
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] === "B") {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    document.writeln(countBs("bbBbbBsdBaBB"));
+
+    const countChar = (s, c) => {
+        let counter = 0;
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] === c) counter++;
+        }
+        return counter;
+    }
+    document.writeln(countChar("bbBbbBsdBaBB","B"));
+
+    const countBsALT = s => countChar(s, "B");
+    document.writeln(countBsALT("bbBbbBsdBaBB"));
+
+
+</script>
+
+</body>
+</html>
