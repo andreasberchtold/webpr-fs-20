@@ -11,6 +11,11 @@ Helpful tidbits from the lecture.
 e.g. for curried function using lambda expressions (brackets are optional, added here for readability):
 `const doit2 = (callme => (arg => callme(arg)));`
 
+## Links
+
+### CSS3
+
+[CSS-Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
 
 ## My Programming Errors
 
