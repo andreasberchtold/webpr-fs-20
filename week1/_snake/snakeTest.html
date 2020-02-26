@@ -11,17 +11,17 @@
 
 let ok = [];
 
-// before start, snake is in start position
+// before start, _snake is in start position
 ok.push(snakeEquals(snake[0] , {x: 10, y: 5} ));
 
-// after one step, snake has moved up
+// after one step, _snake has moved up
 nextBoard();
 ok.push(snakeEquals(snake[0] , {x: 10, y: 4} ));
 
-// before eating food, snake is of size 4
+// before eating food, _snake is of size 4
 ok.push(snake.length === 4);
 
-// after eating food, snake has grown in size
+// after eating food, _snake has grown in size
 food = {x: 10, y: 3};
 nextBoard();
 ok.push(snake.length === 5);

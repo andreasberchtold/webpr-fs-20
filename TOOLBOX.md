@@ -11,11 +11,20 @@ Helpful tidbits from the lecture.
 e.g. for curried function using lambda expressions (brackets are optional, added here for readability):
 `const doit2 = (callme => (arg => callme(arg)));`
 
+### Various
+
+Display the contents of an array as table:
+`console.table(...)`
+
+
 ## Links
 
 ### CSS3
 
 [CSS-Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+### Validation
+[W3 Validator](https://validator.w3.org/)
 
 ## My Programming Errors
 

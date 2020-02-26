@@ -5,13 +5,26 @@
     <title>Scope Tests</title>
 </head>
 <body>
-    <script>
+<script>
+
+    // Alles kann aus Kombinationen von id & fst konstruiert werden.
+    const id = x => x;
+    const fst = x => y => x;
+
+    const snd = fst(id);
 
 
+    document.writeln(id(id) === id);
+    document.writeln(fst(id)("WOAH!") === id);
+    document.writeln(fst(id)(null) === id);
+    document.writeln(snd("WOAH!")(id) === id);
+    document.writeln(snd(null)(id) === id);
+    const one = fst(1);
+
+    document.writeln(one(null) === 1);
 
 
-
-    </script>
+</script>
 </body>
 </html>
 
