@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    const range = (start, end, step = 1) => {
+        let result = [];
+        let cnt;
+        if (end - start >= 0) {
+            cnt = step >= 0 ? (end - start) / step : 0;
+        } else {
+            cnt = step >= 0 ? 0 : (end - start) / step;
+        }
+        let current = start;
+        for (let i = 0; i <= cnt; i++) {
+            result.push(current);
+            current += step;
+        }
+        return result;
+    }
+
+
+    const sum = (arr) => {
+        let result = 0;
+        for (let n of arr) {
+            result += n;
+        }
+        return result;
+    }
+
+    //console.log(range(1,100));
+    //console.log(sum(range(1,10)));
+
+
+    const reverseArray = (arr) => {
+        if (1 >= arr.length) return arr;
+        return [arr.pop()].concat(reverseArray(arr));
+    }
+
+    let a = [1, 2, 3];
+    console.log(reverseArray(a));
+    console.log(a);
+
+    const reverseArrayInPlace = (arr) => {
+        let last = arr.length - 1;
+        let cnt = Math.floor(arr.length / 2);
+
+        for (let i = 0; i < cnt; i++) {
+            let tmp = arr[i];
+            arr[i] = arr[last - i];
+            arr[last - i] = tmp;
+        }
+        return arr;
+    }
+
+
+    const arrayToList = (arr) => {
+        if (1 === arr.length) return {value: arr.shift(), rest: null};
+        return {value: arr.shift(), rest: arrayToList(arr)};
+    }
+    const listToArray = (list) => {
+        if (list.rest === null) return list.value;
+        return [list.value].concat(listToArray(list.rest));
+    }
+    const prepend = (el, list) => {
+        return {value: el, rest: list };
+    }
+    const nth = (list, idx) => {
+        if (0 === idx) return list.value;
+        if (idx <= 0 || list.rest === null) return undefined;
+        return nth(list.rest, idx - 1);
+    }
+
+    let testArr = [1,2,3];
+    let testList = arrayToList(testArr);
+
+
+    const deepEqual = (a, b) => {
+        if (a === b) return true;
+
+        if (typeof a == null)
+    }
+
+
+
+</script>
+</body>
+</html>

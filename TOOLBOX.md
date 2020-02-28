@@ -16,6 +16,12 @@ e.g. for curried function using lambda expressions (brackets are optional, added
 Display the contents of an array as table:
 `console.table(...)`
 
+Destructuring: Little bit like pattern matching in Haskell.
+`const [a,b,c] = [1,2,3]` binds a to 1, b to 2 and c to 3. 
+Works analogously for objects: `let { a } = { a: 1, b:2 }`. 
+
+In JSON (different from JavaScript Objects!), all property names have to be surrounded by double quotes and only simple data expressions are allowed.
+`JSON.stringify` and `JSON.parse` are available.
 
 ## Links
 
