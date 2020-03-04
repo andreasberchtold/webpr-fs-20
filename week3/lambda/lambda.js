@@ -1,9 +1,30 @@
+const id = x => x;
 
+const fst = x => y => x;
+const snd = x => y => y;
+const M   = f => f (f); // Mockingbird (Y-Combinator)
 
+const konst = fst;
+
+// Church encoding of boolean variables
+const T = fst;
+const F = snd;
+
+const and = first => second => first (second)(first );
+const or  = M;
+
+const Pair = first => second => selector => selector (first)(second);
+const firstname = p => p(T);
+const lastname  = snd;
+
+// const Triple = first => second => third =>
+// const tfirstname = fst;
+// const tlastname =
+// const tage =
 
 // ----- special -----
 
-const Tuple = n => [
+ const Tuple = n => [
     parmStore (n + 1) ( [] ) (parms => parms.reduce( (accu, it) => accu(it), parms.pop() ) ), // ctor
     ...Array.from( {length:n}, (it, idx) => iOfN (n) (idx) () )                    // selectors
 ];

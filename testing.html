@@ -7,16 +7,16 @@
 <body>
 
 <script>
+    const T = x => y => x;
+    const F = x => y => y;
 
-    x = 0;
-    (() => {
-        x = 2;
-        return x;
-    })();
+    const pair = a => b => f => f(a)(b);
+    const fst = p => p(T);
+    const snd = p => p(F);
 
-
-    console.log(x);
-
+    const oneTwo = pair(1)(2);
+    fst(oneTwo) = 0;
+    console.log(fst(oneTwo))
 
 
 </script>
