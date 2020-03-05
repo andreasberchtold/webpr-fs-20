@@ -13,14 +13,37 @@ const F = snd;
 const and = first => second => first (second)(first );
 const or  = M;
 
+const not = p => p(F)(T);
+
+
 const Pair = first => second => selector => selector (first)(second);
-const firstname = p => p(T);
+const firstname = fst;
 const lastname  = snd;
 
-// const Triple = first => second => third =>
-// const tfirstname = fst;
-// const tlastname =
-// const tage =
+const Triple = first => second => third => selector => selector (first)(Pair(second)(third));
+const tfirstname = fst;
+const tlastname = first => p => p(fst);
+const tage = first => p => p(snd);
+
+
+
+
+const flip = f => x => y => f(y)(x);
+
+const beq = p => q => p(q)(not(q));
+
+
+
+// Week 3 Assignment ---------------------------------------
+const Left = x => f => g => f(x);
+const Right = x => f => g => g(x);
+const either = e => f => g => e(f)(g);
+const safeDiv = num => divisor =>
+    divisor === 0 ? Left ("Cannot divide by 0") : Right (num / divisor);
+
+const eShow = r => either (r)(id)(x=> "Result is: " + x);
+//----------------------------------------------------------
+
 
 // ----- special -----
 

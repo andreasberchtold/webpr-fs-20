@@ -31,22 +31,31 @@ ok.push( or(T)(F) === T );
 ok.push( or(F)(T) === T );
 ok.push( or(T)(T) === T );
 
-// // flip
-// // flip(f)(x)(y) = f(y)(x)
-//
-// // not
-//
-// // beq
-//
+// flip
+// flip(f)(x)(y) = f(y)(x)
+ok.push( flip(snd)(T)(F) === snd(F)(T))
+
+// not
+ok.push( not(T) === F );
+ok.push( not(F) === T );
+
+// beq
+ok.push( beq(T)(T) === T);
+ok.push( beq(T)(F) === F);
+ok.push( beq(F)(T) === F);
+ok.push( beq(F)(F) === T);
+
+
 // Pair
 const dierk = Pair("Dierk")("König"); // immutable
 ok.push( dierk(firstname) === "Dierk");
 ok.push( dierk(lastname)  === "König");
 
-// const tdierk = Triple("Dierk")("König")(50); // immutable
-// ok.push( tdierk(tfirstname) === "Dierk");
-// ok.push( tdierk(tlastname)  === "König");
-// ok.push( tdierk(tage)       === 50);
+const tdierk = Triple("Dierk")("König")(50); // immutable
+ok.push( tdierk(tfirstname) === "Dierk");
+ok.push( tdierk(tlastname)  === "König");
+ok.push( tdierk(tage)       === 50);
+
 
 // // tuple
 // const [Person, fn, ln, ag] = Tuple(3);
@@ -93,6 +102,14 @@ ok.push( dierk(lastname)  === "König");
 // ok.push( doPay(invo) === "Roger 4711");
 // ok.push( doPay(pal ) === "pal: Dierk");
 
+
+
+// Week 3 Assignment Test
+const x_ = Math.random();
+
+ok.push(eShow( safeDiv(1)(0)) === "Cannot divide by 0");
+ok.push(eShow( safeDiv(x_)(1)) === "Result is: "+x_);
+// --------------------------------------------------------
 
 
 
