@@ -7,8 +7,8 @@ const M   = f => f (f); // Mockingbird (Y-Combinator)
 const konst = fst;
 
 // Church encoding of boolean variables
-const T = fst;
-const F = snd;
+const T = p => q => p;
+const F = p => q => q;
 
 const and = first => second => first (second)(first );
 const or  = M;
@@ -16,20 +16,19 @@ const or  = M;
 const not = p => p(F)(T);
 
 
-const Pair = first => second => selector => selector (first)(second);
+const Pair = x => y => f => f(x)(y);
 const firstname = fst;
 const lastname  = snd;
 
-const Triple = first => second => third => selector => selector (first)(Pair(second)(third));
-const tfirstname = fst;
-const tlastname = first => p => p(fst);
-const tage = first => p => p(snd);
+const Triple = x => y => z => f => g => f ( g(x)(y))(z);
+// ??
+const xAcc = t => ((fst)(fst))(t);
+
 
 
 
 
 const flip = f => x => y => f(y)(x);
-
 const beq = p => q => p(q)(not(q));
 
 

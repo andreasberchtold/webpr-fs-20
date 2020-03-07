@@ -10,14 +10,21 @@
     const T = x => y => x;
     const F = x => y => y;
 
+
     const pair = a => b => f => f(a)(b);
     const fst = p => p(T);
     const snd = p => p(F);
+    const id = x => x;
+
+    const person = firstname => lastname => age => pair(pair(firstname)(lastname))(age);
+    const firstn = p => T(T(p));
+    const lastn = p => snd(p);
+    const age = p => snd(p);
 
 
-
-
-
+    const nd = person("ab")("ber")(28);
+    // console.log(nd(firstn));
+    console.log(typeof person("ab")("as")(22));
 
 
 
