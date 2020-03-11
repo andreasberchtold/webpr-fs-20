@@ -23,6 +23,7 @@ Works analogously for objects: `let { a } = { a: 1, b:2 }`.
 In JSON (different from JavaScript Objects!), all property names have to be surrounded by double quotes and only simple data expressions are allowed.
 `JSON.stringify` and `JSON.parse` are available.
 
+HOF: map, filter, reduce
 ## Links
 
 ### CSS3
