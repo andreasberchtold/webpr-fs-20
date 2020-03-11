@@ -54,7 +54,6 @@ ok.push( dierk(lastname)  === "König");
 const tdierk = Triple("Dierk")("König")(50); // immutable
 
 
-console.log(tdierk);
 // console.log(tdierk(tlastname));
 // console.log(tdierk(tage));
 // ok.push( tdierk(tfirstname) === "Dierk");
@@ -77,18 +76,17 @@ console.log(tdierk);
 //
 // // Pair equal
 //
-// // either
-//
+// either
 // const safeDiv = num => divisor =>
 //     divisor === 0
 //     ? Left("schlecht!")
 //     : Right(num / divisor);
-//
-// either( safeDiv(1)(0)  )
-//       (console.error)
-//       (console.log);
-//
-//
+
+either( safeDiv(1)(0) )
+      (console.error)
+      (console.log);
+
+
 // const [Cash, CreditCard, Invoice, PayPal, pay] = Choice(4);
 // const cash = Cash ();
 // const card = CreditCard ("0000-1111-2222-3333");
@@ -108,7 +106,7 @@ console.log(tdierk);
 
 
 
-// Week 3 Assignment Test
+// Week 3 Assignment Test ---------------------------------
 const x_ = Math.random();
 
 ok.push(eShow( safeDiv(1)(0)) === "Cannot divide by 0");

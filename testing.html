@@ -27,6 +27,16 @@
     console.log(typeof person("ab")("as")(22));
 
 
+    // Week 3 Assignment ---------------------------------------
+    const Left = x => f => g => f(x);
+    const Right = x => f => g => g(x);
+    const either = e => f => g => e(f)(g);
+    const safeDiv = num => divisor =>
+        divisor === 0 ? Left ("Cannot divide by 0") : Right (num / divisor);
+
+    const eShow = r => either (r)(id)(x=> "Result is: " + x);
+    //----------------------------------------------------------
+
 
 </script>
 

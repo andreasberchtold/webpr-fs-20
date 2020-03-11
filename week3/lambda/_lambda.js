@@ -20,10 +20,8 @@ const Pair = x => y => f => f(x)(y);
 const firstname = fst;
 const lastname  = snd;
 
-const Triple = x => y => z => f => g => f ( g(x)(y))(z);
+const Triple = x => y => z => Pair ( Pair(x)(y))(z);
 // ??
-const xAcc = t => ((fst)(fst))(t);
-
 
 
 

@@ -42,4 +42,5 @@ Array Destructuring:
 ```javascript
 let [a, b] = [1, 2, 3, 4] // a==1, b==2;
 let [a, b] = foo(); // function can have multiple return values
+const head = ( [a] ) => a; // head([1,2,3,4]) == 1
 ```
