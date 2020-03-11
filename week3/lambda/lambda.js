@@ -32,7 +32,6 @@ const flip = f => x => y => f(y)(x);
 const beq = p => q => p(q)(not(q));
 
 
-
 // Week 3 Assignment ---------------------------------------
 const Left = x => f => g => f(x);
 const Right = x => f => g => g(x);
@@ -44,9 +43,10 @@ const eShow = r => either (r)(id)(x=> "Result is: " + x);
 //----------------------------------------------------------
 
 
+
 // ----- special -----
 
- const Tuple = n => [
+const Tuple = n => [
     parmStore (n + 1) ( [] ) (parms => parms.reduce( (accu, it) => accu(it), parms.pop() ) ), // ctor
     ...Array.from( {length:n}, (it, idx) => iOfN (n) (idx) () )                    // selectors
 ];

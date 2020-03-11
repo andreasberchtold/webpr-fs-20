@@ -34,3 +34,12 @@ In JSON (different from JavaScript Objects!), all property names have to be surr
 
 ## My Programming Errors
 
+
+## Goodies
+
+Array Destructuring:
+
+```javascript
+let [a, b] = [1, 2, 3, 4] // a==1, b==2;
+let [a, b] = foo(); // function can have multiple return values
+```

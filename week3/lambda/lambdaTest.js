@@ -60,8 +60,7 @@ console.log(tdierk);
 // ok.push( tdierk(tfirstname) === "Dierk");
 // ok.push( tdierk(tlastname)  === "König");
 // ok.push( tdierk(tage)       === 50);
-
-
+//
 // // tuple
 // const [Person, fn, ln, ag] = Tuple(3);
 // const person = Person("Dierk")("König")(50);
@@ -112,8 +111,8 @@ console.log(tdierk);
 // Week 3 Assignment Test
 const x_ = Math.random();
 
-// ok.push(eShow( safeDiv(1)(0)) === "Cannot divide by 0");
-// ok.push(eShow( safeDiv(x_)(1)) === "Result is: "+x_);
+ok.push(eShow( safeDiv(1)(0)) === "Cannot divide by 0");
+ok.push(eShow( safeDiv(x_)(1)) === "Result is: "+x_);
 // --------------------------------------------------------
 
 
