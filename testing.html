@@ -37,6 +37,21 @@
     const eShow = r => either (r)(id)(x=> "Result is: " + x);
     //----------------------------------------------------------
 
+    const bonusFormula = 'employee.revenue * 0.2'
+    // WEEK 5 Assignment
+    // const bonusCalculation = Function('employee', 'employee.bonus= ' + bonusFormula);
+    const factor_ = .2;
+    //
+    // const e = {revenue: 1000, bonus: null};
+    // bonusCalculation(e);
+    // console.log(e.bonus === e.revenue * factor_);
+
+    const bonusCalculation = Function('employee', 'return employee.bonus = ' + bonusFormula);
+    const e = {revenue: 10000, bonus: null};
+    bonusCalculation(e);
+    console.log(e.bonus === e.revenue * factor_);
+
+    // -----------------------------------------------------------
 
 </script>
 

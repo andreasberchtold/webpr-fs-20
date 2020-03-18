@@ -10,7 +10,8 @@ function start() {
     const context      = canvas.getContext("2d");
 
     // todo: how to display?
-
+    display(context, x => eval(userFunction.value));
+    userFunction.onchange = text => display(context, x => eval(userFunction.value));
 }
 
 function display(context, f) {
