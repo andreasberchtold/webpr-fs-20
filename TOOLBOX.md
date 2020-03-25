@@ -24,6 +24,11 @@ In JSON (different from JavaScript Objects!), all property names have to be surr
 `JSON.stringify` and `JSON.parse` are available.
 
 HOF: map, filter, reduce
+
+#### Objects
+
+Avoid the use of `this` whenever possible.
+
 ## Links
 
 ### CSS3

@@ -7,51 +7,10 @@
 <body>
 
 <script>
-    const T = x => y => x;
-    const F = x => y => y;
 
 
-    const pair = a => b => f => f(a)(b);
-    const fst = p => p(T);
-    const snd = p => p(F);
-    const id = x => x;
-
-    const person = firstname => lastname => age => pair(pair(firstname)(lastname))(age);
-    const firstn = p => T(T(p));
-    const lastn = p => snd(p);
-    const age = p => snd(p);
 
 
-    const nd = person("ab")("ber")(28);
-    // console.log(nd(firstn));
-    console.log(typeof person("ab")("as")(22));
-
-
-    // Week 3 Assignment ---------------------------------------
-    const Left = x => f => g => f(x);
-    const Right = x => f => g => g(x);
-    const either = e => f => g => e(f)(g);
-    const safeDiv = num => divisor =>
-        divisor === 0 ? Left ("Cannot divide by 0") : Right (num / divisor);
-
-    const eShow = r => either (r)(id)(x=> "Result is: " + x);
-    //----------------------------------------------------------
-
-    const bonusFormula = 'employee.revenue * 0.2'
-    // WEEK 5 Assignment
-    // const bonusCalculation = Function('employee', 'employee.bonus= ' + bonusFormula);
-    const factor_ = .2;
-    //
-    // const e = {revenue: 1000, bonus: null};
-    // bonusCalculation(e);
-    // console.log(e.bonus === e.revenue * factor_);
-
-    const bonusCalculation = Function('employee', 'return employee.bonus = ' + bonusFormula);
-    const e = {revenue: 10000, bonus: null};
-    bonusCalculation(e);
-    console.log(e.bonus === e.revenue * factor_);
-
-    // -----------------------------------------------------------
 
 </script>
 
