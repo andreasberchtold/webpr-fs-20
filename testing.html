@@ -9,7 +9,39 @@
 <script>
 
 
+    // max 3
 
+    const Person = name => {
+        let age = 0;
+        return {
+            getAge: () => age,
+            setAge: newAge => age = newAge,
+            getName: () => name,
+            setName: newName => name = newName
+        }
+    };
+
+    const me = Person("myself");
+    me.name = "***";
+    document.writeln(me.getName() === "myself");
+
+    // max 2
+
+
+    // max 5
+
+    Array.prototype.eq = function (ys) {
+        if (this.length !== ys.length) {
+            return false;
+        }
+        let areEq = true;
+        for (let i = 0; i < this.length; i++) {
+            if (this[i] !== ys[i]) {
+                areEq = false;
+            }
+        }
+        return areEq;
+    }
 
 
 </script>
