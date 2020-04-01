@@ -25,6 +25,12 @@ In JSON (different from JavaScript Objects!), all property names have to be surr
 
 HOF: map, filter, reduce
 
+#### Looping
+
+`arr.forEach`
+
+`Object.keys(obj).forEach(key => console.log(key))`
+
 #### Objects
 
 Avoid the use of `this` whenever possible.
