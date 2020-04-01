@@ -25,6 +25,8 @@ In JSON (different from JavaScript Objects!), all property names have to be surr
 
 HOF: map, filter, reduce
 
+Create range array: `Array.from({length:10}).map((el, idx) => idx)`
+
 #### Looping
 
 `arr.forEach`
