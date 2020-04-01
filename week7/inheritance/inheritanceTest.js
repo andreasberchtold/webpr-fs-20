@@ -88,13 +88,14 @@
         };
 
         //...
+        Object.setPrototypeOf(result, Person.prototype);
 
         return result
     }
 
     const dk = Person( {work: () => ""} );
 
-    Object.setPrototypeOf(dk, Person.prototype);
+    // Object.setPrototypeOf(dk, Person.prototype);
 
     ok.push(dk instanceof Person);
 

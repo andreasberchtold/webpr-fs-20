@@ -9,39 +9,28 @@
 <script>
 
 
-    // max 3
 
-    const Person = name => {
-        let age = 0;
-        return {
-            getAge: () => age,
-            setAge: newAge => age = newAge,
-            getName: () => name,
-            setName: newName => name = newName
-        }
+    //WEEK 7
+
+
+
+    // 5 points
+
+
+
+
+
+    //test
+
+    Function.prototype.then = function(f) {
+        return x => f(this(x));
     };
 
-    const me = Person("myself");
-    me.name = "***";
-    document.writeln(me.getName() === "myself");
+    const add3 = a => a + 1;
+    const double = a => 2*a;
 
-    // max 2
+    // add.then(mult).then(add) (1) === (1 + add_) * factor_ + add_;
 
-
-    // max 5
-
-    Array.prototype.eq = function (ys) {
-        if (this.length !== ys.length) {
-            return false;
-        }
-        let areEq = true;
-        for (let i = 0; i < this.length; i++) {
-            if (this[i] !== ys[i]) {
-                areEq = false;
-            }
-        }
-        return areEq;
-    }
 
 
 </script>
