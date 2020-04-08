@@ -29,13 +29,17 @@ Create range array: `Array.from({length:10}).map((el, idx) => idx)`
 
 #### Looping
 
-`arr.forEach`
+`arr.forEach( (value, index) => { ... }`
 
 `Object.keys(obj).forEach(key => console.log(key))`
 
 #### Objects
 
 Avoid the use of `this` whenever possible.
+
+#### Funktionskomposition
+
+`const compose = f => g => x => g(f(x))`
 
 ## Links
 
@@ -47,6 +51,7 @@ Avoid the use of `this` whenever possible.
 [W3 Validator](https://validator.w3.org/)
 
 ## My Programming Errors
+
 
 
 ## Goodies
