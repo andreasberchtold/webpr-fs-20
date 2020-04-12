@@ -14,16 +14,30 @@
             border-width: 3px;
             border-style: solid;
         }
+
         .fallback {
-            border-color: blue;
+            /*border-color: blue;*/
             border-width: 3px;
         }
+
         .progress {
-            background: blue;
+            /*background: blue;*/
         }
+
         #dice {
-            clear:both;
+            clear: both;
         }
+
+        main {
+            display:grid;
+
+            align-items: center;
+            justify-content: center;
+        }
+        #fields {
+            width: 50vw;
+        }
+
     </style>
     <script src="oopsie.js"></script>
 </head>
@@ -31,20 +45,23 @@
 
 <body onload="start()">
 
+<main>
 
-<div id="fields">
+    <div id="fields">
 
-</div>
+    </div>
 
-<div id="dice">
-    []
-</div>
+    <div id="dice">
+        []
+    </div>
 
-<div>
-    <button onclick="dice()">throw dice</button>
-    <button onclick="turn()">turn</button>
-</div>
+    <div>
+        <button onclick="dice()">throw dice</button>
+        <button onclick="turn()">turn</button>
+        <p><span id="currentPlayer"></span>'s turn.</p>
+    </div>
 
+</main>
 
 </body>
 
