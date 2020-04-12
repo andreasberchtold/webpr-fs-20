@@ -10,31 +10,6 @@
 
 
 
-    //WEEK 8
-
-
-
-        // document.writeln(handle(it.push(1)).length === 1);
-    // console.log(it);
-    //5 pkt
-
-
-    const failSafe = d => f => x => {
-        try {
-            return f(x);
-        } catch {
-            return d;
-        }
-    }
-
-    const doError = x => {throw new Error() };
-    const errorCount = failSafe(1)(doError);
-
-    console.log(failSafe (false) (x=>x) (true));
-    console.log(failSafe(true) (doError) (null));
-    console.log(errorCount(null) === 1);
-
-
 </script>
 
 </body>
