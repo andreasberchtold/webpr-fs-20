@@ -16,8 +16,6 @@ e.g. for curried function using lambda expressions (brackets are optional, added
 Display the contents of an array as table:
 `console.table(...)`
 
-Destructuring: Little bit like pattern matching in Haskell.
-`const [a,b,c] = [1,2,3]` binds a to 1, b to 2 and c to 3. 
 Works analogously for objects: `let { a } = { a: 1, b:2 }`. 
 
 In JSON (different from JavaScript Objects!), all property names have to be surrounded by double quotes and only simple data expressions are allowed.
@@ -59,7 +57,30 @@ Avoid the use of `this` whenever possible.
 Array Destructuring:
 
 ```javascript
-let [a, b] = [1, 2, 3, 4] // a==1, b==2;
+let [a, b] = [1, 2, 3, 4]; // a==1, b==2;
+const [a,...b] = [1,2,3]; // a==1, b==[2,3];
 let [a, b] = foo(); // function can have multiple return values
 const head = ( [a] ) => a; // head([1,2,3,4]) == 1
+```
+
+Object Destructuring: Often used for function arguments to have named parameters instead of positional parameters.
+
+```javascript
+const { a, b, c } = { a: 1, b: 2, c: 3 };
+```
+
+Array and Object Constructors:
+```javascript
+// Arrays
+const a = [2,3];
+[7,a] === [7, [2,3]];
+[7, ...a] === [7,2,3];
+[...a, ...a] === [2,3,2,3]
+
+// Objects
+const obj1 = {a: 1, b: 2};
+const b = { c: 3, ...obj1 }; // b === {c: 3, a: 1, b: 2}
+const getX = () => 1;
+const c = {getX: getX} // equivalent to c = {getX}
+ 
 ```
